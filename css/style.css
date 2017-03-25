@@ -27,6 +27,7 @@ main {
     background-color: aqua;
     width: calc(100vw - 3rem);
     height: calc(100vh - 6rem);
+    margin: 0;
 }
 
 footer {
