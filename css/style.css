@@ -1,0 +1,33 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: aquamarine;
+    font-family: Calibri, serif;
+}
+
+header {
+    background-color: lightslategray;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 4rem;
+}
+
+nav {
+    background-color: grey;
+    float: left;
+    width: 3rem;
+    height: calc(100vh - 6rem);
+}
+
+main {
+    background-color: aqua;
+    width: calc(100vw - 3rem);
+    height: calc(100vh - 6rem);
+}
+
+footer {
+    background-color: chartreuse;
+    font-style: italic;
+    line-height: 2rem;
+}
+
