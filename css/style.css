@@ -1,12 +1,24 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: aquamarine;
     font-family: Calibri, serif;
+}
+
+body, header {
+    background-color: white;
 }
 
 p {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    background-color: darkred;
 }
 
 header, footer {
@@ -14,28 +26,34 @@ header, footer {
 }
 
 header {
-    background-color: lightslategray;
     font-style: italic;
     font-weight: bold;
     line-height: 4rem;
+    width: calc(100vw - 6rem);
+    margin-right: auto;
+    margin-left: auto;
 }
 
 nav {
-    background-color: grey;
-    float: left;
-    width: 3rem;
-    height: calc(100vh - 6rem);
+    background-color: orange;
+    width: calc(100vw - 6rem - 2px);
+    height: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 1px;
 }
 
 main {
-    background-color: aqua;
-    width: calc(100vw - 3rem);
-    height: calc(100vh - 6rem);
-    margin: 0;
+    background-color: red;
+    width: calc(100vw - 6rem);
+    height: calc(100vh - 9rem);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
-    background-color: chartreuse;
+    background-color: #ccc9cc;
     font-style: italic;
     line-height: 2rem;
 }
