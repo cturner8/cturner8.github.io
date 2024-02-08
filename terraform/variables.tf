@@ -9,3 +9,9 @@ variable "cloudflare_account_id" {
   sensitive   = true
   description = "Cloudflare account ID"
 }
+
+variable "cloudflare_zone_id" {
+  type        = string
+  sensitive   = true
+  description = "Cloudflare DNS zone ID"
+}

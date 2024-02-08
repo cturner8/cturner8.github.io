@@ -22,3 +22,15 @@ resource "cloudflare_pages_project" "portfolio" {
     }
   }
 }
+
+resource "cloudflare_pages_domain" "portfolio_domain" {
+  account_id   = var.cloudflare_account_id
+  project_name = cloudflare_pages_project.portfolio.name
+  domain       = "cturner.co.uk"
+}
+
+resource "cloudflare_pages_domain" "portfolio_www_domain" {
+  account_id   = var.cloudflare_account_id
+  project_name = cloudflare_pages_project.portfolio.name
+  domain       = "www.cturner.co.uk"
+}
