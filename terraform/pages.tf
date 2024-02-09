@@ -26,11 +26,18 @@ resource "cloudflare_pages_project" "portfolio" {
 resource "cloudflare_pages_domain" "portfolio_domain" {
   account_id   = var.cloudflare_account_id
   project_name = cloudflare_pages_project.portfolio.name
-  domain       = "cturner.co.uk"
+  domain       = data.cloudflare_zone.primary.name
 }
 
-resource "cloudflare_pages_domain" "portfolio_www_domain" {
-  account_id   = var.cloudflare_account_id
-  project_name = cloudflare_pages_project.portfolio.name
-  domain       = "www.cturner.co.uk"
+resource "cloudflare_page_rule" "www_redirect" {
+  zone_id  = var.cloudflare_zone_id
+  target   = "www.${data.cloudflare_zone.primary.name}"
+  priority = 1
+
+  actions {
+    forwarding_url {
+      url         = "https://${cloudflare_pages_domain.portfolio_domain.domain}"
+      status_code = 301
+    }
+  }
 }
